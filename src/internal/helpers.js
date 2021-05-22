@@ -55,23 +55,23 @@ module.exports = {
                     return resolve([]);
                 }
 
-                // if (membership.indexOf('all') > -1) {
-                //   this._cache.set('all', cacheKey, results);
-                //   return resolve(api.processResults(opts, results));
-                // }
+                if (membership.indexOf('all') > -1) {
+                    this._cache.set('all', cacheKey, results);
+                    return resolve(api.processResults(opts, results));
+                }
 
-                // let compiled = [];
-                // if (membership.indexOf('user') > -1) {
-                //   compiled = compiled.concat(results.users);
-                // }
+                let compiled = [];
+                if (membership.indexOf('user') > -1) {
+                    compiled = compiled.concat(results.users);
+                }
 
-                // if (membership.indexOf('group') > -1) {
-                //   compiled = compiled.concat(results.groups);
-                // }
+                if (membership.indexOf('group') > -1) {
+                    compiled = compiled.concat(results.groups);
+                }
 
-                // if (membership.indexOf('other') > -1) {
-                //   compiled = compiled.concat(results.other);
-                // }
+                if (membership.indexOf('other') > -1) {
+                    compiled = compiled.concat(results.other);
+                }
 
                 this._cache.set('all', cacheKey, compiled);
                 resolve(api.processResults(opts, compiled));
