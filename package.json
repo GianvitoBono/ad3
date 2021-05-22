@@ -1,0 +1,25 @@
+{
+    "author": {
+        "name": "Gianvito Bono"
+    },
+    "dependencies": {
+        "activedirectory": "^0.7.2",
+        "ldapjs": "^2.0.0",
+        "lodash.orderby": "^4.6.0",
+        "node-ssha256": "^0.1.1"
+    },
+    "description": "Active Directory API for Node",
+    "devDependencies": {
+        "husky": "^4.2.5",
+        "jest": "^26.1.0",
+        "lint-staged": "^10.2.11",
+        "prettier": "^2.0.5"
+    },
+    "license": "MIT",
+    "main": "index.js",
+    "name": "ad3",
+    "scripts": {
+        "precommit": "lint-staged"
+    },
+    "version": "0.0.5"
+}
