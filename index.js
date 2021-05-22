@@ -101,7 +101,7 @@ class AD {
         this.ldapAD = `ldap://${urlLdap}`;
 
         this.adLdap = new activedirectory({
-            url: config.url,
+            url: urlLdap,
             baseDN: config.baseDN,
             username: config.user,
             password: config.pass,
