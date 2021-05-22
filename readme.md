@@ -1,4 +1,4 @@
-# AD2
+# AD3
 
 > Making Active Directory jQuery-easy.
 
