@@ -98,7 +98,7 @@ class AD {
             }
         });
         let urlLdap = config.url.split("://")[1];
-        this.ldapAD = `ldap://${urlLdap}`;
+        urlLdap = `ldap://${urlLdap}`;
 
         this.adLdap = new activedirectory({
             url: urlLdap,
