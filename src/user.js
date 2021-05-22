@@ -45,7 +45,9 @@ module.exports = {
                 department,
                 photoId,
                 adOu,
-                baseDN
+                baseDN,
+                division,
+                thumbnailPhoto
             } = opts;
 
             let { passwordExpires, enabled } = opts;
@@ -99,7 +101,9 @@ module.exports = {
                 department: department,
                 physicalDeliveryOfficeName: location,
                 postOfficeBox: photoId,
+                division: division,
                 objectClass: "User",
+                thumbnailPhoto: thumbnailPhoto,
                 userPassword: ssha.create(password)
             };
 
@@ -167,7 +171,9 @@ module.exports = {
                 company: 'company',
                 photoId: 'postOfficeBox',
                 upn: 'userPrincipalName',
-                displayName: "displayName"
+                displayName: "displayName",
+                thumbnailPhoto: "thumbnailPhoto",
+                division: "division"
             };
 
             let later = [];
