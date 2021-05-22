@@ -1,4 +1,4 @@
-const activedirectory = require('activedirectory');
+const activedirectory = require('activedirectory2');
 const configFile = require('./config.json');
 
 const imports = {
