@@ -97,6 +97,19 @@ class AD {
                 group: config.groupAttibutes
             }
         });
+        let urlLdap = config.url.split("://")[1];
+        this.ldapAD = `ldap://${urlLdap}`;
+
+        this.adLdap = new activedirectory({
+            url: config.url,
+            baseDN: config.baseDN,
+            username: config.user,
+            password: config.pass,
+            attributes: {
+                user: config.userAttributes,
+                group: config.groupAttibutes
+            }
+        });
     }
 
     cache(bool) {

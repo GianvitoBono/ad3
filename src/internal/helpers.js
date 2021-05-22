@@ -44,7 +44,7 @@ module.exports = {
                 includeDeleted: false
             };
 
-            this.ad.find(config, (err, results) => {
+            this.adLdap.find(config, (err, results) => {
                 if (err) {
                     /* istanbul ignore next */
                     return reject(err);
