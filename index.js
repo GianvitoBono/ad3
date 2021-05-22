@@ -52,7 +52,7 @@ class AD {
         this.config = config;
 
         this._cache = {
-            enabled: true,
+            enabled: false,
             expiration: 600000,
             users: {},
             groups: {},
