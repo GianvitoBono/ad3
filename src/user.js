@@ -25,7 +25,7 @@ const parseLocation = require('./util/parseLocation');
 
 module.exports = {
     async getAllUsers(opts) {
-        return await this._findByType(opts, ['user']);
+        return await this._findByType(opts, undefined);
     },
 
     async addUser(opts) {
