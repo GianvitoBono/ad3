@@ -52,7 +52,7 @@ class AD {
         this.config = config;
 
         this._cache = {
-            enabled: false,
+            enabled: true,
             expiration: 600000,
             users: {},
             groups: {},
@@ -92,19 +92,6 @@ class AD {
             tlsOptions: {
                 rejectUnauthorized: false
             },
-            attributes: {
-                user: config.userAttributes,
-                group: config.groupAttibutes
-            }
-        });
-        let urlLdap = config.url.split("://")[1];
-        urlLdap = `ldap://${urlLdap}`;
-
-        this.adLdap = new activedirectory({
-            url: urlLdap,
-            baseDN: config.baseDN,
-            username: config.user,
-            password: config.pass,
             attributes: {
                 user: config.userAttributes,
                 group: config.groupAttibutes

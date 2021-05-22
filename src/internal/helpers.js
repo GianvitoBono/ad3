@@ -40,11 +40,11 @@ module.exports = {
             const domain = this.config.domain;
             const config = {
                 query: `CN=*`,
-                // includeMembership: membership,
+                includeMembership: membership,
                 includeDeleted: false
             };
 
-            this.adLdap.find(config, (err, results) => {
+            this.ad.find(config, (err, results) => {
                 if (err) {
                     /* istanbul ignore next */
                     return reject(err);
