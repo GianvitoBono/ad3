@@ -4,7 +4,7 @@
 
 ---
 
-AD2 is an extension of the original AD package and a Javascript implementation of common Active Directory tasks, built to be simple as possible.
+AD3 is an extension of the AD2 package that is an extension of the original AD package and a Javascript implementation of common Active Directory tasks, built to be simple as possible.
 
 Really simple.
 
