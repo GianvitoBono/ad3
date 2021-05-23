@@ -1,0 +1,23 @@
+diff --git a/node_modules/@types/activedirectory2/index.d.ts b/node_modules/@types/activedirectory2/index.d.ts
+index e57a92d..d5d4b7c 100644
+--- a/node_modules/@types/activedirectory2/index.d.ts
++++ b/node_modules/@types/activedirectory2/index.d.ts
+@@ -22,16 +22,8 @@ interface ADProperties {
+         ]
+     };
+     attributes?: {
+-        user: [
+-            'dn', 'distinguishedName',
+-            'userPrincipalName', 'sAMAccountName', 'mail',
+-            'lockoutTime', 'whenCreated', 'pwdLastSet', 'userAccountControl',
+-            'employeeID', 'sn', 'givenName', 'initials', 'cn', 'displayName',
+-            'comment', 'description'
+-        ],
+-        group: [
+-            'dn', 'cn', 'description', 'distinguishedName', 'objectCategory'
+-        ]
++        user: Array<string>,
++        group: Array<string>
+     };
+ }
+ 
