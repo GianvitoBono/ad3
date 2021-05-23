@@ -1,7 +1,16 @@
 diff --git a/node_modules/@types/activedirectory2/index.d.ts b/node_modules/@types/activedirectory2/index.d.ts
-index e57a92d..d5d4b7c 100644
+index e57a92d..d4fd811 100644
 --- a/node_modules/@types/activedirectory2/index.d.ts
 +++ b/node_modules/@types/activedirectory2/index.d.ts
+@@ -8,7 +8,7 @@ import { Filter } from "ldapjs";
+ 
+ interface ADProperties {
+     url: string;
+-    baseDN: string;
++    baseDN?: string;
+     username: string;
+     password: string;
+     pageSize?: 1000;
 @@ -22,16 +22,8 @@ interface ADProperties {
          ]
      };
